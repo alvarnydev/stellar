@@ -33,6 +33,8 @@ export default function StarGrid() {
 
       const tl = gsap.timeline();
 
+      // https://gsap.com/resources/getting-started/Staggers/#advanced-configuration
+
       // Entrance animation
       tl.to(".star-grid-item", {
         keyframes: [

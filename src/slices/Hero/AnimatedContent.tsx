@@ -30,12 +30,14 @@ export default function AnimatedContent({
 
       const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 
+      // Grow in hero heading
       tl.fromTo(
         ".hero__heading",
         { scale: 0.5 },
         { scale: 1, opacity: 1, duration: 1.4 },
       );
 
+      // Slide in hero body from below
       tl.fromTo(
         ".hero__body",
         { y: 20 },
@@ -43,18 +45,23 @@ export default function AnimatedContent({
         "-=0.6",
       );
 
+      // Shrink in hero button
       tl.fromTo(
         ".hero__button",
         { scale: 1.5 },
         { scale: 1, opacity: 1, duration: 1.3 },
         "-=0.8",
       );
+
+      // Slide in hero image from below
       tl.fromTo(
         ".hero__image",
         { y: 100 },
         { y: 0, opacity: 1, duration: 1.3 },
         "+=0.3",
       );
+
+      // Create glow around hero image
       tl.fromTo(
         ".hero__glow",
         { scale: 0.5 },
